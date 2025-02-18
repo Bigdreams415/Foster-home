@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now</title>
+    <link rel="stylesheet" href="payment.css"> 
+</head>
+<body>
+    <div class="donation-container">
+        <h2>Choose a Donation Amount</h2>
+        <div class="amount-options">
+            <button class="amount-btn" data-amount="10">$10</button>
+            <button class="amount-btn" data-amount="50">$50</button>
+            <button class="amount-btn" data-amount="100">$100</button>
+            <button class="amount-btn custom">Custom Amount</button>
+        </div>
+        <input type="number" id="custom-amount" placeholder="Enter custom amount">
+
+        <h2>Select Payment Method</h2>
+        <div class="payment-options">
+            <button class="payment-btn" data-method="cashapp">Cash App</button>
+            <button class="payment-btn" data-method="paypal">PayPal</button>
+            <button class="payment-btn" data-method="stripe">Stripe</button>
+            <button class="payment-btn" data-method="bitcoin">Bitcoin</button>
+            <button class="payment-btn" data-method="wire">Wire Transfer</button>
+            <button class="payment-btn" data-method="western-union">Western Union</button>
+        </div>
+        <input type="text" id="other-method" placeholder="Enter other payment method">
+
+        <h2>Your Contact Details</h2>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <input type="tel" id="phone" placeholder="Phone Number (Optional)">
+        <textarea id="notes" placeholder="Additional Notes (Optional).....If you have a donation category please state it here...e.g 'Food & Nutrition, 'Education & School Suppliers, 'Medical Aid' etc''"></textarea>
+
+        <p class="contact-message">Our team will contact you within 24-48 hours to finalize your donation.</p>
+        <button id="contact-btn">Contact Management to Proceed with Payment</button>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

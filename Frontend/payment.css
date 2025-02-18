@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Change from height to min-height */
+    margin: 0;
+    padding: 20px; /* Add padding to prevent content from touching the edges */
+    overflow-y: auto; /* Allow scrolling if content is longer than the screen */
+}
+
+
+.donation-container {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.amount-options, .payment-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.amount-btn, .payment-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.amount-btn:hover, .payment-btn:hover {
+    background: #0056b3;
+}
+
+.amount-btn.selected, .payment-btn.selected {
+    background: #28a745;
+    color: white;
+    font-weight: bold;
+    border: 2px solid #1e7e34;
+}
+
+.custom {
+    background: #ff9800;
+}
+
+.custom:hover {
+    background: #e68900;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea {
+    resize: none;
+    height: 80px;
+}
+
+.contact-message {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+}
+
+#contact-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+#contact-btn:hover {
+    background: #218838;
+}

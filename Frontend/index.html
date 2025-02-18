@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hope Haven Orphanage</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Include Leaflet.js Library -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav-container">
+            <div class="logo">Hope Haven</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="donation.html">Donation</a>
+                <a href="shop.html">Shop & Support</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section class="hero">
+        <!-- Image Slider -->
+        <div class="slider">
+            <div class="slide" style="background-image: url('images/istockphoto-1093528300-612x612.webp');"></div>
+            <div class="slide" style="background-image: url('images/istockphoto-1475870425-612x612.webp');"></div>
+            <div class="slide" style="background-image: url('images/download.jpeg');"></div>
+            <div class="slide" style="background-image: url('images/images (1).jpeg');"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="hero-content">
+            <h1>Providing Love and Care for Children</h1>
+            <p>Join us in making a difference in the lives of orphaned children</p>
+            <button class="cta-button">Donate Now</button>
+        </div>
+    </section>
+
+    <section class="mission" id="about">
+        <div class="mission-container">
+            <div class="mission-card">
+                <i class="fas fa-home"></i>
+                <h3>Safe Shelter</h3>
+                <p>Providing a secure and loving environment for children in need</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-heart"></i>
+                <h3>Quality Care</h3>
+                <p>Professional caregivers ensuring proper development and education</p>
+            </div>
+            <div class="mission-card">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Community Support</h3>
+                <p>Building strong community relationships for sustainable growth</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="programs" id="programs">
+        <h2 class="section-title">Our Programs</h2>
+        <div class="programs-grid">
+            <div class="program-card">
+                <img src="images/istockphoto-1470158757-612x612.webp" alt="Education Program">
+                <div class="program-content">
+                    <h3>Education Support</h3>
+                    <p>Ensuring access to quality education for all children</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="images/download121.jpeg" alt="Health Program">
+                <div class="program-content">
+                    <h3>Healthcare</h3>
+                    <p>Comprehensive medical care and nutrition programs</p>
+                </div>
+            </div>
+            <div class="program-card">
+                <img src="images/istockphoto-1475870425-612x612.webp" alt="Sports Program">
+                <div class="program-content">
+                    <h3>Sports & Activities</h3>
+                    <p>Promoting physical and social development through sports</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="meet-the-children">
+        <h2>Meet the Children</h2>
+        <p>Learn about the amazing kids at our orphanage and their dreams.</p>
+        <div class="children-grid">
+            <div class="child-card" onclick="openModal('Ivy', 'images/art.jpeg', 'Ivy is an aspiring artist who loves to paint and draw.')">
+                <img src="images/art.jpeg" alt="Emma">
+                <h3>Ivy</h3>
+                <p>14 years old - Aspiring Artist</p>
+            </div>
+            <div class="child-card" onclick="openModal('Daniel', 'images/doc.jpg', 'Daniel and his co friends dreams of becoming a doctor to help those in need.')">
+                <img src="images/doc.jpg" alt="Daniel">
+                <h3>Daniel and some other Co. Future Doctor</h3>
+                <p>15 years old - Future Doctor</p>
+            </div>
+            <div class="child-card" onclick="openModal('David', 'images/singing.jpeg', 'David has a passion for singing and wants to be a musician.')">
+                <img src="images/singing.jpeg" alt="Sophia">
+                <h3>David</h3>
+                <p>7 years old - Loves to Sing</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-name"></h2>
+            <img id="modal-img" src="" alt="">
+            <p id="modal-story"></p>
+        </div>
+    </div>
+
+
+    <!-- Our Mission & Vision Section -->
+    <section class="mission-vision">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <div class="content">
+                <div class="card">
+                    <img src="icons/heart.svg" alt="Love & Care">
+                    <h3>Love & Care</h3>
+                    <p>Providing a safe and loving environment where every child feels valued.</p>
+                </div>
+                <div class="card">
+                    <img src="icons/education.svg" alt="Quality Education">
+                    <h3>Quality Education</h3>
+                    <p>Ensuring every child receives a proper education for a brighter future.</p>
+                </div>
+                <div class="card">
+                    <img src="icons/health.svg" alt="Health & Well-being">
+                    <h3>Health & Well-being</h3>
+                    <p>Focusing on physical and mental well-being through proper healthcare.</p>
+                </div>
+                <div class="card">
+                    <img src="icons/empowerment.svg" alt="Empowerment">
+                    <h3>Empowerment</h3>
+                    <p>Providing skills and knowledge to help children grow into independent adults.</p>
+                </div>
+                <div class="card">
+                    <img src="icons/community.svg" alt="Community Support">
+                    <h3>Community Support</h3>
+                    <p>Engaging with communities to ensure long-term support and sustainability.</p>
+                </div>
+                <div class="card">
+                    <img src="icons/home.svg" alt="A Place to Call Home">
+                    <h3>A Place to Call Home</h3>
+                    <p>Creating a warm and nurturing space where children feel truly at home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success & Impact Section -->
+    <section class="success-impact">
+        <div class="container">
+            <h2>Our Global Impact</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <img src="icons/children.svg" alt="Children Helped">
+                    <h3><span class="counter" data-target="50000">0</span>+</h3>
+                    <p>Children Helped Globally</p>
+                </div>
+                <div class="stat-card">
+                    <img src="icons/meal.svg" alt="Meals Provided">
+                    <h3><span class="counter" data-target="1000000">0</span>+</h3>
+                    <p>Meals Provided</p>
+                </div>
+                <div class="stat-card">
+                    <img src="icons/home.svg" alt="Homes Built">
+                    <h3><span class="counter" data-target="2000">0</span>+</h3>
+                    <p>Homes Built</p>
+                </div>
+                <div class="stat-card">
+                    <img src="icons/volunteers.svg" alt="Volunteers">
+                    <h3><span class="counter" data-target="15000">0</span>+</h3>
+                    <p>Volunteers Involved</p>
+                </div>
+                <div class="stat-card">
+                    <img src="icons/years.svg" alt="Years of Service">
+                    <h3><span class="counter" data-target="25">0</span>+</h3>
+                    <p>Years of Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Impact Map Section -->
+    <section class="impact-map">
+        <div class="container">
+            <h2>Global Impact Map</h2>
+            <p>Explore our reach and impact worldwide.</p>
+            <div id="map"></div>
+        </div>
+    </section>
+
+
+
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Hope Street</p>
+                <p>City, Country</p>
+                <p>Email: info@hopehaven.org</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sponsor a Child Section -->
+    <section class="sponsor-section">
+        <h2 class="section-title">Sponsor a Child</h2>
+        <div class="filters">
+            <input type="text" id="search" placeholder="Search by name..." class="search-bar">
+            <select id="age-filter" class="filter-dropdown">
+                <option value="">Filter by Age</option>
+                <option value="0-5">0-5 years</option>
+                <option value="6-10">6-10 years</option>
+                <option value="11-15">11-15 years</option>
+            </select>
+            <select id="gender-filter" class="filter-dropdown">
+                <option value="">Filter by Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </div>
+        <div class="profiles-grid" id="profiles-grid">
+            <!-- Child profiles will be dynamically inserted here -->
+        </div>
+    </section>
+
+        
+    <!-- Child Profile Template (Hidden) -->
+    <template id="profile-template">
+    <div class="profile-card">
+        <img src="" alt="Child Photo" class="profile-photo">
+        <h3 class="profile-name"></h3>
+        <p class="profile-age"></p>
+        <p class="profile-bio"></p>
+        <button class="sponsor-button">Sponsor Now</button>
+        <p class="sponsor-status"></p>
+    </div>
+    </template>
+
+    <!-- Success Stories Section -->
+    <section class="success-stories-section">
+        <div class="success-stories-container">
+            <h2 class="success-stories-title">Success Stories</h2>
+            <div class="success-stories-carousel">
+                <div class="success-story active">
+                    <img src="images/art.jpeg" alt="Emily" class="success-story-image">
+                    <p class="success-story-text">"Thanks to the support, I have been able to go to school and chase my dreams!"</p>
+                    <h4 class="success-story-name">- Emily</h4>
+                </div>
+                <div class="success-story">
+                    <img src="images/jacob.jpg" alt="Jacob" class="success-story-image">
+                    <p class="success-story-text">"This organization gave me a home and a future. Forever grateful!"</p>
+                    <h4 class="success-story-name">- Jacob</h4>
+                </div>
+                <div class="success-story">
+                    <img src="images/aisha.jpg" alt="Aisha" class="success-story-image">
+                    <p class="success-story-text">"Now I have access to education and healthcare, making my life so much better!"</p>
+                    <h4 class="success-story-name">- Aisha</h4>
+                </div>
+            </div>
+            <div class="success-stories-controls">
+                <button class="success-stories-prev">&#10094;</button>
+                <button class="success-stories-next">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

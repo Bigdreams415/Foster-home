@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="donation.css">
+    <title>Donation</title>
+</head>
+<body>
+    <section class="donation-page">
+        <h1 class="page-title">Make a Difference Today</h1>
+        <p class="page-subtitle">Choose a cause and help us bring hope to children in need.</p>
+    
+        <!-- Fundraising Campaigns -->
+        <div class="fundraising-campaigns">
+            <div class="campaign">
+                <h3>Food & Nutrition</h3>
+                <p>Providing daily meals to underprivileged children.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $10,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 75%;">$7,500 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+    
+            <div class="campaign">
+                <h3>Education & School Supplies</h3>
+                <p>Ensuring every child has access to quality education.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $8,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 50%;">$4,000 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+    
+            <div class="campaign">
+                <h3>Medical Aid</h3>
+                <p>Funding healthcare and medical support for children.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $12,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 40%;">$4,800 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+    
+            <div class="campaign">
+                <h3>Orphanage Renovation</h3>
+                <p>Improving living conditions for children without families.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $15,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 30%;">$4,500 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+    
+            <div class="campaign">
+                <h3>Clothing & Essentials</h3>
+                <p>Providing warm clothing and hygiene kits for children.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $6,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%;">$3,600 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+    
+            <div class="campaign">
+                <h3>Emergency Relief</h3>
+                <p>Helping children affected by natural disasters and crises.</p>
+                <div class="progress-section">
+                    <p class="goal-text">Goal: $20,000</p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 20%;">$4,000 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Donate</button>
+            </div>
+        </div>
+    
+        <!-- Donation Tiers -->
+        <div class="donation-tiers">
+            <h2>Choose a Donation Tier</h2>
+            <div class="tier">
+                <h3>$10</h3>
+                <p>Provides 2 meals</p>
+                <button class="donate-btn" data-amount="10">Donate</button>
+            </div>
+            <div class="tier">
+                <h3>$50</h3>
+                <p>Buys school supplies</p>
+                <button class="donate-btn" data-amount="50">Donate</button>
+            </div>
+            <div class="tier">
+                <h3>$100</h3>
+                <p>Supports medical care</p>
+                <button class="donate-btn" data-amount="100">Donate</button>
+            </div>
+            <div class="tier custom-tier">
+                <input type="number" id="custom-amount" placeholder="Enter amount">
+                <button class="donate-btn custom-donate">Donate</button>
+            </div>
+        </div>
+    
+        <!-- Live Donor Feed -->
+        <div class="donor-feed">
+            <h2>Recent Donations</h2>
+            <ul id="donor-list">
+                <li>John D. - $50</li>
+                <li>Sarah M. - $100</li>
+                <li>Anonymous - $25</li>
+                <li>Emily R. - $200</li>
+                <li>Michael S. - $75</li>
+            </ul>
+        </div>
+    </section>
+    <script src="donation.js"></script>
+</body>
+</html>

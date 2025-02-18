@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="shop.css">
+    <title>Shop & Suport</title>
+</head>
+<body>
+    <header>
+        <nav class="shop-nav-container">
+            <div class="shop-logo">Hope Haven Store</div>
+            <ul class="shop-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#support">Support</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="cart-icon"><a href="cart.html">🛒 <span class="cart-count">0</span></a></li>
+            </ul>
+            <div class="hamburger-menu">&#9776;</div>
+        </nav>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1 class="hero-title">Shop with Purpose – Every Purchase Supports a Child!</h1>
+            <p class="hero-subtext">Buy handcrafted gifts, essentials, and more – all proceeds go towards orphanage support.</p>
+            <div class="hero-buttons">
+                <a href="#shop" class="btn primary-btn">Start Shopping</a>
+                <a href="#learn-more" class="btn secondary-btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="marketplace">
+        <h2 class="marketplace-heading">Every Purchase Helps a Child</h2>
+        <div class="marketplace-container">
+            <div class="product-card">
+                <img src="images/AAA kids (1).png" alt="Handmade Bracelet" class="product-image">
+                <h3 class="product-title">Handmade Bracelet</h3>
+                <p class="product-description">Crafted with love by children at Hope Haven.</p>
+                <div class="product-price">$15.00</div>
+                <button class="add-to-cart" data-item="Handmade Bracelet" data-price="15.00">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/DSC_0141.jpg" alt="Custom T-Shirt" class="product-image">
+                <h3 class="product-title">Custom T-Shirt</h3>
+                <p class="product-description">Wear hope with pride and support the cause.</p>
+                <div class="product-price">$25.00</div>
+                <button class="add-to-cart" data-item="Custom T-Shirt" data-price="25.00">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="images/lo.jpg" alt="Inspirational Notebook" class="product-image">
+                <h3 class="product-title">Inspirational Notebook</h3>
+                <p class="product-description">A notebook filled with hope and positivity.</p>
+                <div class="product-price">$12.00</div>
+                <button class="add-to-cart" data-item="Inspirational Notebook" data-price="12.00">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quantity Selection Panel -->
+    <div class="quantity-panel hidden">
+        <h3 class="panel-title">Select Quantity</h3>
+        <p class="selected-item-name"></p>
+        <div class="quantity-controls">
+            <button class="quantity-decrease">-</button>
+            <span class="quantity-value">1</span>
+            <button class="quantity-increase">+</button>
+        </div>
+        <p class="total-price">Total: $<span class="total-amount">0.00</span></p>
+        <button class="confirm-selection">Confirm</button>
+        <button class="cancel-selection">Cancel</button>
+    </div>
+    <script src="shop.js"></script>
+</body>
+</html>
