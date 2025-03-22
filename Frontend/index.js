@@ -148,7 +148,7 @@ const children = [
         age: "8 years",
         gender: "female",
         bio: "Loves drawing and dreams of becoming an artist.",
-        photo: "https://source.unsplash.com/random/400x400/?child,smile",
+        photo: "images/young-woman",
         sponsored: false,
     },
     {
@@ -156,7 +156,7 @@ const children = [
         age: "6 years",
         gender: "male",
         bio: "Enjoys playing soccer and wants to be a footballer.",
-        photo: "https://source.unsplash.com/random/400x400/?child,playing",
+        photo: "images/ball",
         sponsored: true,
     },
     {
@@ -164,15 +164,15 @@ const children = [
         age: "10 years",
         gender: "female",
         bio: "Loves reading and dreams of becoming a teacher.",
-        photo: "https://source.unsplash.com/random/400x400/?child,studying",
+        photo: "images/reading",
         sponsored: false,
     },
     {
-        name: "David",
+        name: "Success and Victoria",
         age: "12 years",
-        gender: "male",
+        gender: "female",
         bio: "Enjoys science experiments and wants to be a scientist.",
-        photo: "https://source.unsplash.com/random/400x400/?child,thinking",
+        photo: "images/chemistry-studen.webp",
         sponsored: false,
     },
 ];
@@ -246,8 +246,7 @@ document.getElementById("gender-filter").addEventListener("change", (e) => {
 
  //success stories section
 
- 
- document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
     const stories = document.querySelectorAll(".success-story");
     const prevBtn = document.querySelector(".success-stories-prev");
