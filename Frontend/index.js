@@ -30,22 +30,21 @@ let currentSlide = 0;
 const slides = document.querySelectorAll('.slide');
 const totalSlides = slides.length;
 
+// Function to show the current slide
 function showSlide(index) {
-    // Reset all slides
     slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${100 * (i - index)}%)`;
+        slide.style.opacity = (i === index) ? "1" : "0";
     });
 }
 
+// Auto slide change
 function nextSlide() {
     currentSlide = (currentSlide + 1) % totalSlides;
     showSlide(currentSlide);
 }
 
-// Automatically change slides every 5 seconds
+// Start the slider
 setInterval(nextSlide, 5000);
-
-// Initialize the first slide
 showSlide(currentSlide);
 
 
@@ -276,3 +275,36 @@ document.getElementById("gender-filter").addEventListener("change", (e) => {
     setInterval(nextStory, 5000); // Auto-slide every 5 seconds
 });
  
+//Hamburger menu functionality
+
+function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    navLinks.classList.toggle('active');
+
+    // Animate the hamburger menu
+    menuToggle.classList.toggle('open');
+}
+
+//animation for the miision section
+function revealOnScroll() {
+    const cards = document.querySelectorAll(".mission-card");
+    
+    cards.forEach(card => {
+        const cardPosition = card.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        if (cardPosition < windowHeight - 50) {
+            card.classList.add("show");
+        } else {
+            card.classList.remove("show"); // Remove class if scrolled out of view
+        }
+    });
+}
+
+// Add scroll event listener
+window.addEventListener("scroll", revealOnScroll);
+
+// Trigger once on page load
+revealOnScroll();

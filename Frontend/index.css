@@ -79,6 +79,19 @@ header {
     transition: all 0.3s ease;
 }
 
+.menu-toggle.open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
 @media (max-width: 768px) {
     .nav-links {
         display: none;
@@ -104,45 +117,7 @@ header {
 
 
 /* Hero Section */
-/* .hero {
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('images/istockphoto-1470158757-612x612.webp') center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    padding: 0 2rem;
-}
-
-.hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-}
-
-.cta-button {
-    padding: 1rem 2rem;
-    background: #e74c3c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.cta-button:hover {
-    background: #c0392b;
-} */
-
-
-/* Hero Slider Section */
+ 
 .hero {
     position: relative;
     height: 100vh;
@@ -156,7 +131,7 @@ header {
     width: 100%;
     height: 100%;
     display: flex;
-    transition: transform 1s ease-in-out;
+    background: none; /* Ensure no background */
 }
 
 .slide {
@@ -164,7 +139,17 @@ header {
     height: 100%;
     background-size: cover;
     background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;  /* Hide all slides initially */
+    transition: opacity 1s ease-in-out;
 }
+
+.slide.active {
+    opacity: 1;  /* Show only the active slide */
+}
+
 
 .hero-content {
     position: absolute;
@@ -213,60 +198,132 @@ header {
     z-index: 1;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        height: 80vh; /* Reduce height slightly for better fit */
+        padding: 0 1rem; /* Add some padding */
+    }
+
+    .hero-content {
+        width: 90%; /* Limit width for better text readability */
+        top: 55%; /* Adjust position slightly */
+    }
+
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* Slightly reduce for balance */
+        margin-bottom: 0.8rem;
+        line-height: 1.2; /* Improve readability */
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Increase font size for better readability */
+        margin-bottom: 1.5rem;
+        line-height: 1.5; /* Improve spacing */
+    }
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button size */
+        padding: 0.8rem 1.5rem;
     }
 }
 
-/* Mission Section */
-.mission {
+
+/* Mission & Vision Section */
+.mission-vision {
     padding: 5rem 2rem;
     background: #f9f9f9;
-}
-
-.mission-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.mission-card {
-    background: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     text-align: center;
 }
 
-.mission-card i {
-    font-size: 2.5rem;
-    color: #e74c3c;
-    margin-bottom: 1rem;
+.container {
+    max-width: 1200px;
+    margin: auto;
 }
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Grid Layout */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+/* Cards */
+.card {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Icons - Larger & More Colorful */
+.card i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s;
+}
+
+/* Unique Colors for Each Icon */
+.card:nth-child(1) i { color: #e74c3c; } /* Love & Care - Red */
+.card:nth-child(2) i { color: #3498db; } /* Education - Blue */
+.card:nth-child(3) i { color: #2ecc71; } /* Health - Green */
+.card:nth-child(4) i { color: #f39c12; } /* Empowerment - Yellow */
+.card:nth-child(5) i { color: #9b59b6; } /* Community - Purple */
+.card:nth-child(6) i { color: #e67e22; } /* Home - Orange */
+.card:nth-child(7) i { color: #27ae60; } /* Nutrition - Dark Green */
+.card:nth-child(8) i { color: #8e44ad; } /* Mentorship - Dark Purple */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .mission-vision {
+        padding: 4rem 1rem;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
+
 
 /* Programs Section */
 .programs {
     padding: 5rem 2rem;
+    background: #f9f9f9;
 }
 
 .section-title {
     text-align: center;
     margin-bottom: 3rem;
+    font-size: 2rem;
+    color: #333;
 }
 
 .programs-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
 }
 
@@ -275,17 +332,60 @@ header {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
 .program-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.program-card:hover img {
+    transform: scale(1.05);
 }
 
 .program-content {
     padding: 1.5rem;
+    text-align: center;
 }
+
+.program-content h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.program-content p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .programs {
+        padding: 3rem 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .program-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .program-content p {
+        font-size: 0.95rem;
+    }
+}
+
 
 /* Footer */
 footer {
@@ -462,7 +562,7 @@ footer {
 }
 
 
-/* success and impact section */
+/* Success & Impact Section */
 .success-impact {
     text-align: center;
     padding: 60px 20px;
@@ -473,8 +573,10 @@ footer {
 .success-impact h2 {
     font-size: 2.8em;
     margin-bottom: 30px;
+    color: #333;
 }
 
+/* Grid Layout */
 .stats-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -483,32 +585,76 @@ footer {
     margin: 0 auto;
 }
 
+/* Stat Cards */
 .stat-card {
     background: #f4f7f6;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
 }
 
+/* Hover Effect */
 .stat-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.07);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-.stat-card img {
-    width: 60px;
+/* Icons */
+.stat-card i {
+    font-size: 3rem;
     margin-bottom: 15px;
+    transition: color 0.3s;
 }
+
+/* Unique Colors for Each Icon */
+.stat-card:nth-child(1) i { color: #e74c3c; } /* Children Helped - Red */
+.stat-card:nth-child(2) i { color: #f39c12; } /* Meals Provided - Yellow */
+.stat-card:nth-child(3) i { color: #2ecc71; } /* Homes Built - Green */
+.stat-card:nth-child(4) i { color: #3498db; } /* Volunteers - Blue */
+.stat-card:nth-child(5) i { color: #9b59b6; } /* Years of Service - Purple */
 
 .stat-card h3 {
-    font-size: 2em;
+    font-size: 2.2em;
     color: #27ae60;
 }
 
 .stat-card p {
     font-size: 1.2em;
+    color: #555;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .success-impact {
+        padding: 40px 10px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .success-impact h2 {
+        font-size: 2.2rem;
+    }
+
+    .stat-card i {
+        font-size: 2.5rem;
+    }
+
+    .stat-card h3 {
+        font-size: 1.8em;
+    }
+
+    .stat-card p {
+        font-size: 1em;
+    }
 }
 
 /* live impact sections */

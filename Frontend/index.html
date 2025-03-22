@@ -6,6 +6,7 @@
     <title>Hope Haven Orphanage</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <!-- Include Leaflet.js Library -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
@@ -134,38 +135,50 @@
             <h2>Our Mission & Vision</h2>
             <div class="content">
                 <div class="card">
-                    <img src="icons/heart.svg" alt="Love & Care">
+                    <i class="fa-solid fa-heart"></i>
                     <h3>Love & Care</h3>
                     <p>Providing a safe and loving environment where every child feels valued.</p>
                 </div>
                 <div class="card">
-                    <img src="icons/education.svg" alt="Quality Education">
+                    <i class="fa-solid fa-user-graduate"></i>
                     <h3>Quality Education</h3>
                     <p>Ensuring every child receives a proper education for a brighter future.</p>
                 </div>
                 <div class="card">
-                    <img src="icons/health.svg" alt="Health & Well-being">
+                    <i class="fa-solid fa-suitcase-medical"></i>
                     <h3>Health & Well-being</h3>
                     <p>Focusing on physical and mental well-being through proper healthcare.</p>
                 </div>
                 <div class="card">
-                    <img src="icons/empowerment.svg" alt="Empowerment">
+                    <i class="fa-solid fa-lightbulb"></i>
                     <h3>Empowerment</h3>
                     <p>Providing skills and knowledge to help children grow into independent adults.</p>
                 </div>
                 <div class="card">
-                    <img src="icons/community.svg" alt="Community Support">
+                    <i class="fa-solid fa-handshake-angle"></i>
                     <h3>Community Support</h3>
                     <p>Engaging with communities to ensure long-term support and sustainability.</p>
                 </div>
                 <div class="card">
-                    <img src="icons/home.svg" alt="A Place to Call Home">
+                    <i class="fa-solid fa-house-chimney"></i>
                     <h3>A Place to Call Home</h3>
                     <p>Creating a warm and nurturing space where children feel truly at home.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-bowl-food"></i>
+                    <h3>Nutrition & Food</h3>
+                    <p>Ensuring children have access to healthy meals for proper growth.</p>
+                </div>
+                <div class="card">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Mentorship & Guidance</h3>
+                    <p>Providing role models and guidance for a brighter future.</p>
                 </div>
             </div>
         </div>
     </section>
+
+
 
     <!-- Success & Impact Section -->
     <section class="success-impact">
@@ -173,75 +186,33 @@
             <h2>Our Global Impact</h2>
             <div class="stats-grid">
                 <div class="stat-card">
-                    <img src="icons/children.svg" alt="Children Helped">
+                    <i class="fa-solid fa-child-reaching"></i>
                     <h3><span class="counter" data-target="50000">0</span>+</h3>
                     <p>Children Helped Globally</p>
                 </div>
                 <div class="stat-card">
-                    <img src="icons/meal.svg" alt="Meals Provided">
+                    <i class="fa-solid fa-bowl-food"></i>
                     <h3><span class="counter" data-target="1000000">0</span>+</h3>
                     <p>Meals Provided</p>
                 </div>
                 <div class="stat-card">
-                    <img src="icons/home.svg" alt="Homes Built">
+                    <i class="fa-solid fa-house"></i>
                     <h3><span class="counter" data-target="2000">0</span>+</h3>
                     <p>Homes Built</p>
                 </div>
                 <div class="stat-card">
-                    <img src="icons/volunteers.svg" alt="Volunteers">
+                    <i class="fa-solid fa-users"></i>
                     <h3><span class="counter" data-target="15000">0</span>+</h3>
                     <p>Volunteers Involved</p>
                 </div>
                 <div class="stat-card">
-                    <img src="icons/years.svg" alt="Years of Service">
+                    <i class="fa-solid fa-award"></i>
                     <h3><span class="counter" data-target="25">0</span>+</h3>
                     <p>Years of Service</p>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- Live Impact Map Section -->
-    <section class="impact-map">
-        <div class="container">
-            <h2>Global Impact Map</h2>
-            <p>Explore our reach and impact worldwide.</p>
-            <div id="map"></div>
-        </div>
-    </section>
-
-
-
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>Contact Us</h3>
-                <p>123 Hope Street</p>
-                <p>City, Country</p>
-                <p>Email: info@hopehaven.org</p>
-                <p>Phone: +1 234 567 890</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><a href="#">Facebook</a></li>
-                    <li><a href="#">Twitter</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">YouTube</a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
 
     <!-- Sponsor a Child Section -->
     <section class="sponsor-section">
@@ -305,6 +276,45 @@
             </div>
         </div>
     </section>
+    
+    <!-- Live Impact Map Section -->
+    <section class="impact-map">
+        <div class="container">
+            <h2>Global Impact Map</h2>
+            <p>Explore our reach and impact worldwide.</p>
+            <div id="map"></div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>123 Hope Street</p>
+                <p>City, Country</p>
+                <p>Email: info@hopehaven.org</p>
+                <p>Phone: +1 234 567 890</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#programs">Programs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">YouTube</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 
     <script src="index.js"></script>
 </body>
