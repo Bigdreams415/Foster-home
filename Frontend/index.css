@@ -391,23 +391,33 @@ h2 {
 footer {
     background: #2c3e50;
     color: #fff;
-    padding: 4rem 2rem;
+    padding: 3rem 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .footer-section h3 {
     margin-bottom: 1rem;
+    font-size: 1.5rem;
+    color: #f1c40f;
 }
 
+.footer-section p,
 .footer-section ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
+    font-size: 1rem;
+    color: #ecf0f1;
 }
 
 .footer-section ul li {
@@ -417,15 +427,31 @@ footer {
 .footer-section a {
     color: #ecf0f1;
     text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
 }
 
+.footer-section a:hover {
+    color: #f1c40f;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none;
+    .footer-container {
+        grid-template-columns: 1fr; /* Stack sections */
+        text-align: center;
     }
 
-    .hero-content h1 {
-        font-size: 2.5rem;
+    .footer-section {
+        padding: 1rem;
+    }
+
+    .footer-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .footer-section a {
+        font-size: 1rem;
     }
 }
 
@@ -685,6 +711,7 @@ footer {
     padding: 4rem 2rem;
     background: #f9f9f9;
     text-align: center;
+    width: 100%;
 }
 
 .section-title {
@@ -712,7 +739,9 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
 }
 
 .profile-card {
@@ -778,7 +807,13 @@ footer {
     .profiles-grid {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    .search-bar, .filter-dropdown {
+        width: 100%;
+        max-width: 300px;
+    }
 }
+
 
   
 /* Success Stories Section */
