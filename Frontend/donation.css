@@ -1,4 +1,4 @@
-/* Donation Page Styling */
+/* ===================== General Styles ===================== */
 body {
     font-family: Arial, sans-serif;
     background: #f8f9fa;
@@ -7,18 +7,11 @@ body {
     padding: 0;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    padding: 20px;
-}
-
 h1, h2, h3 {
     text-align: center;
     color: #27ae60;
 }
 
-/* Centering the subtitle */
 .page-subtitle {
     text-align: center;
     font-size: 18px;
@@ -27,15 +20,16 @@ h1, h2, h3 {
     margin-bottom: 20px;
 }
 
-/* Fundraising Campaigns */
+/* ===================== Fundraising Campaigns ===================== */
 .fundraising-campaigns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 20px;
+    padding: 0 10px;
 }
 
-.campaign {
+.campaign, .tier {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -64,10 +58,11 @@ h1, h2, h3 {
     border-radius: 10px;
 }
 
-/* Donation Tiers */
+/* ===================== Donation Tiers ===================== */
 .donation-tiers {
     text-align: center;
     margin-top: 40px;
+    padding: 20px;
 }
 
 .donation-tiers h2 {
@@ -76,26 +71,19 @@ h1, h2, h3 {
 }
 
 .tier-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
 }
 
 .tier {
-    background: white;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    min-width: 120px;
+    padding: 30px;
+    aspect-ratio: 1/1;
 }
 
-.tier h3 {
-    margin-bottom: 5px;
-}
-
-.donate-btn {
+.donate-btn, .custom-donate {
     background: #27ae60;
     color: white;
     border: none;
@@ -106,26 +94,26 @@ h1, h2, h3 {
     transition: background 0.3s;
 }
 
-.donate-btn:hover {
+.donate-btn:hover, .custom-donate:hover {
     background: #218c53;
 }
 
-/* Custom Donation Input */
+/* Full-width custom donation section */
 .custom-tier {
-    width: 100%;
-    margin-top: 15px;
+    grid-column: span 4;
     text-align: center;
+    margin-top: 20px;
 }
 
 .custom-tier input {
-    width: 150px;
-    padding: 8px;
-    margin-bottom: 10px;
+    width: 250px;
+    padding: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    margin-right: 10px;
 }
 
-/* Live Donor Feed */
+/* ===================== Live Donor Feed ===================== */
 .donor-feed {
     background: #ffffff;
     padding: 20px;
@@ -151,4 +139,30 @@ h1, h2, h3 {
     border-radius: 5px;
     font-weight: bold;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================== Responsive Design ===================== */
+@media (max-width: 1024px) {
+    .tier-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .custom-tier {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .tier-container {
+        grid-template-columns: 1fr;
+    }
+
+    .custom-tier {
+        grid-column: span 1;
+    }
+
+    .custom-tier input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }

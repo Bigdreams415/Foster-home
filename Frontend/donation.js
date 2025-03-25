@@ -1,3 +1,5 @@
-document.querySelector(".donate-btn").addEventListener("click", function () {
-    window.location.href = "payment.html";
+document.querySelectorAll(".donate-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        window.location.href = "payment.html";
+    });
 });

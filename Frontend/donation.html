@@ -85,14 +85,21 @@
                 <button class="donate-btn">Donate</button>
             </div>
         </div>
-    
-        <!-- Donation Tiers -->
-        <div class="donation-tiers">
-            <h2>Choose a Donation Tier</h2>
+    </section>
+
+    <!-- Donation Tiers -->
+    <div class="donation-tiers">
+        <h2>Choose a Donation Tier</h2>
+        <div class="tier-container">
             <div class="tier">
                 <h3>$10</h3>
                 <p>Provides 2 meals</p>
                 <button class="donate-btn" data-amount="10">Donate</button>
+            </div>
+            <div class="tier">
+                <h3>$25</h3>
+                <p>Buys clothing</p>
+                <button class="donate-btn" data-amount="25">Donate</button>
             </div>
             <div class="tier">
                 <h3>$50</h3>
@@ -100,28 +107,54 @@
                 <button class="donate-btn" data-amount="50">Donate</button>
             </div>
             <div class="tier">
+                <h3>$75</h3>
+                <p>Supports an orphan</p>
+                <button class="donate-btn" data-amount="75">Donate</button>
+            </div>
+            <div class="tier">
                 <h3>$100</h3>
                 <p>Supports medical care</p>
                 <button class="donate-btn" data-amount="100">Donate</button>
             </div>
-            <div class="tier custom-tier">
-                <input type="number" id="custom-amount" placeholder="Enter amount">
-                <button class="donate-btn custom-donate">Donate</button>
+            <div class="tier">
+                <h3>$250</h3>
+                <p>Funds a child's education</p>
+                <button class="donate-btn" data-amount="250">Donate</button>
+            </div>
+            <div class="tier">
+                <h3>$500</h3>
+                <p>Renovates an orphanage</p>
+                <button class="donate-btn" data-amount="500">Donate</button>
+            </div>
+            <div class="tier">
+                <h3>$1000</h3>
+                <p>Provides emergency relief</p>
+                <button class="donate-btn" data-amount="1000">Donate</button>
             </div>
         </div>
-    
-        <!-- Live Donor Feed -->
-        <div class="donor-feed">
-            <h2>Recent Donations</h2>
-            <ul id="donor-list">
-                <li>John D. - $50</li>
-                <li>Sarah M. - $100</li>
-                <li>Anonymous - $25</li>
-                <li>Emily R. - $200</li>
-                <li>Michael S. - $75</li>
-            </ul>
+
+        <!-- Custom Donation Input (Full Width) -->
+        <div class="custom-tier">
+            <input type="number" id="custom-amount" placeholder="Enter amount">
+            <button class="donate-btn custom-donate">Donate</button>
         </div>
-    </section>
+    </div>
+
+
+
+
+    <!-- Live Donor Feed -->
+    <div class="donor-feed">
+        <h2>Recent Donations</h2>
+        <ul id="donor-list">
+            <li>John D. - $50</li>
+            <li>Sarah M. - $100</li>
+            <li>Anonymous - $25</li>
+            <li>Emily R. - $200</li>
+            <li>Michael S. - $75</li>
+        </ul>
+    </div>
+
     <script src="donation.js"></script>
 </body>
 </html>
