@@ -315,3 +315,89 @@
     background: #c0392b;
     transform: scale(1.05);
 }
+
+
+.newsletter {
+    text-align: center;
+    padding: 20px;
+    background: #f4f4f4;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.newsletter-form input {
+    padding: 10px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 15px;
+    background: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.faq {
+    padding: 30px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.faq h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.faq-container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: #fff;
+    border: none;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    margin: 10px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}

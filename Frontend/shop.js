@@ -108,3 +108,23 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
  
+// FAG
+document.addEventListener("DOMContentLoaded", function () {
+    const questions = document.querySelectorAll(".faq-question");
+
+    questions.forEach((question) => {
+        question.addEventListener("click", function () {
+            const answer = this.nextElementSibling;
+            const icon = this.querySelector(".icon");
+
+            // Toggle the active class for smooth transition
+            if (answer.style.maxHeight) {
+                answer.style.maxHeight = null;
+                icon.textContent = "+";
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+                icon.textContent = "−"; // Change to minus sign when open
+            }
+        });
+    });
+});

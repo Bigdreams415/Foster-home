@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Hope Haven Store</title>
+    <link rel="stylesheet" href="support.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Support Center</h1>
+        <p>We’re here to help. Reach out to us for any inquiries.</p>
+    </header>
+    
+    <section class="contact-form">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+    <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <button class="faq-question">How can I track my order?</button>
+            <div class="faq-answer">You will receive an email with a tracking link once your order is shipped.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">What is the return policy?</button>
+            <div class="faq-answer">We accept returns within 14 days of purchase. Contact us for assistance.</div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">How can I support the orphanage further?</button>
+            <div class="faq-answer">You can donate, volunteer, or purchase more items from our store.</div>
+        </div>
+    </section>
+    
+    <section class="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: support@hopehaven.org</p>
+        <p>Phone: +1 234 567 890</p>
+        <p>Address: 123 Hope Street, City, Country</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Hope Haven Store. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                button.nextElementSibling.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
