@@ -97,8 +97,115 @@
                 </div>
                 <button class="donate-btn">Donate</button>
             </div>
+
+            <div class="campaign highlight-campaign">
+                <h3>Special Family Donation Campaign</h3>
+                <p>
+                    A meaningful initiative dedicated to creating lasting change.  
+                    Generously supported by <strong>The Luke Silva Family</strong>
+                </p>
+                <div class="progress-section">
+                    <p class="goal-text"></p>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 67%;">$200,000 Raised</div>
+                    </div>
+                </div>
+                <button class="donate-btn">Join the Mission</button>
+            </div>
+
+
         </div>
     </section>
+
+    <!-- ===================== Donor Hall of Fame ===================== -->
+    <section id="hall-of-fame" class="donor-hall">
+    <div class="container">
+        <h2>Donor Hall of Fame</h2>
+        <p class="sub">Honouring our generous supporters who made transformational gifts.</p>
+
+        <div class="donor-grid">
+        <article class="donor-card major" 
+                data-name="The Luke Silva Family"
+                data-amount="200000"
+                data-title="Founding Supporters"
+                data-bio="The Luke Silva Family has made a transformative gift to support long-term programs focused on education and shelter. Their generosity will reach thousands of children."
+                data-image="images/luke.png">
+            <div class="badge">Major</div>
+            <div class="photo-wrap">
+            <img class="donor-photo" src="images/luke.png" alt="The Luke Silva Family">
+            </div>
+            <div class="donor-info">
+            <h3 class="donor-name">The Luke Silva Family</h3>
+            <p class="donor-title">Founding Supporters</p>
+            <p class="donor-amount">$200,000</p>
+            <div class="donor-actions">
+                <button class="view-profile">View Profile</button>
+                <button class="thank-btn">Say Thanks</button>
+            </div>
+            </div>
+        </article>
+
+        <!-- Example Joined Donor -->
+        <article class="donor-card" 
+                data-name="Sophia O."
+                data-amount="50000"
+                data-title="Community Champion"
+                data-bio="Sophia joined the Amina K. Family to support school rebuild projects and scholarships."
+                data-image="images/IMG_1601.jpg">
+            <div class="photo-wrap">
+            <img class="donor-photo" src="images/IMG_1601.jpg" alt="Sophia O.">
+            </div>
+            <div class="donor-info">
+            <h3 class="donor-name">Sophia O.</h3>
+            <p class="donor-title">Community Champion</p>
+            <p class="donor-amount">$50,000</p>
+            <div class="donor-actions">
+                <button class="view-profile">View Profile</button>
+                <button class="thank-btn">Say Thanks</button>
+            </div>
+            </div>
+        </article>
+
+        <!-- Another example -->
+        <article class="donor-card" 
+                data-name="Amina K."
+                data-amount="25000"
+                data-title="Education Advocate"
+                data-bio="Amina's donation supports school supplies and teacher training."
+                data-image="images/IMG_1602.jpg">
+            <div class="photo-wrap">
+            <img class="donor-photo" src="images/IMG_1602.jpg" alt="Amina K.">
+            </div>
+            <div class="donor-info">
+            <h3 class="donor-name">Amina K.</h3>
+            <p class="donor-title">Education Advocate</p>
+            <p class="donor-amount">$25,000</p>
+            <div class="donor-actions">
+                <button class="view-profile">View Profile</button>
+                <button class="thank-btn">Say Thanks</button>
+            </div>
+            </div>
+        </article>
+        </div>
+    </div>
+
+    <!-- Modal (hidden by default) -->
+    <div id="donor-modal" class="donor-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+        <div class="modal-inner">
+        <button class="modal-close" aria-label="Close profile">&times;</button>
+        <div class="modal-photo-wrap">
+            <img id="modal-photo" src="" alt="">
+        </div>
+        <div class="modal-info">
+            <h3 id="modal-title"></h3>
+            <p id="modal-titleline" class="modal-titleline"></p>
+            <p id="modal-amount" class="modal-amount"></p>
+            <p id="modal-bio" class="modal-bio"></p>
+        </div>
+        </div>
+    </div>
+    </section>
+
 
     <!-- Donation Tiers -->
     <div class="donation-tiers">
