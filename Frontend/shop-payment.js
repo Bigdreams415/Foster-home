@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const emailBody = `Hello,\n\nI have completed my payment of $${totalAmount} using my preferred payment method.\n\nPlease find attached my payment receipt.\n\nThank you.`;
       
       // Redirect to the user's email client using mailto:
-      window.location.href = `mailto:management@orphanage.com?subject=Payment Receipt Submission&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = `mailto:noreplyboa.team@gmail.com?subject=Payment Receipt Submission&body=${encodeURIComponent(emailBody)}`;
       
       // Show confirmation modal after a slight delay
       setTimeout(() => {

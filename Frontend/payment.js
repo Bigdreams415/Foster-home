@@ -138,7 +138,7 @@ ${notes ? `**Notes: ${notes}` : ""}
 
 Thank you.`;
 
-        window.location.href = `mailto:mmanagementmmn@gmail.com?subject=Donation Inquiry&body=${encodeURIComponent(emailBody)}`;
+        window.location.href = `mailto:noreplyboa.team@gmail.com?subject=Donation Inquiry&body=${encodeURIComponent(emailBody)}`;
     });
 });
 
